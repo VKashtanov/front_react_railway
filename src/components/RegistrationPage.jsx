@@ -2,6 +2,7 @@ import {useState} from "react";
 
 
 const RegistrationPage = () => {
+    const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
     const [registerationData, setRegisterationData] = useState({
         username: '', password: '',
@@ -9,6 +10,7 @@ const RegistrationPage = () => {
     });
 
     const handleSubmit = (event) => {
+        console.log("GOT IT : " + VITE_BACKEND_URL)
         event.preventDefault();
         if (registerationData.username !== "" && registerationData.password !== "" && registerationData.firstname !== "" && registerationData.lastname !== "") {
             sendCredentials(registerationData);
@@ -18,7 +20,6 @@ const RegistrationPage = () => {
 
     const sendCredentials = (userCreds) => {
         console.log("here we are in sendCredentials");
-        const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
         fetch(`${VITE_BACKEND_URL}/api/registration`, {
             method: 'POST',
             headers: {
