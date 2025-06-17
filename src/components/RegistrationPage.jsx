@@ -10,11 +10,12 @@ const RegistrationPage = () => {
     });
 
     const handleSubmit = (event) => {
-        console.log("GOT IT : " + VITE_BACKEND_URL)
         event.preventDefault();
-        if (registerationData.username !== "" && registerationData.password !== "" && registerationData.firstname !== "" && registerationData.lastname !== "") {
-            sendCredentials(registerationData);
-        }
+        console.log("GOT IT : " + VITE_BACKEND_URL);
+
+        // if (registerationData.username !== "" && registerationData.password !== "" && registerationData.firstname !== "" && registerationData.lastname !== "") {
+        //     sendCredentials(registerationData);
+        // }
     };
 
 
