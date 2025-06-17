@@ -22,7 +22,8 @@ function LogingPage() {
 
     const sendCredentials = async (userCreds) => {
         try {
-            const response = await fetch('http://localhost:8080/api/login', {
+            const backendURL = import.meta.env.VITE_BACKEND_URL;
+            const response = await fetch(backendURL + '/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

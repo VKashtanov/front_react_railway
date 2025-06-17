@@ -17,8 +17,9 @@ const RegistrationPage = () => {
 
 
     const sendCredentials = (userCreds) => {
-
-        fetch('http://localhost:8080/api/registration', {
+        const backendURL = import.meta.env.VITE_BACKEND_URL;
+        console.log(backendURL)
+        fetch(backendURL+'/api/registration', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
