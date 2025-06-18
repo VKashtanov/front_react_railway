@@ -5,7 +5,6 @@ COPY package.json package-lock.json ./
 RUN npm cache clean --force && npm install
 COPY . .
 RUN npm run build  # Creates optimized files in `/app/dist`
-CMD ["npm", "run", "start"]
 # Stage 2: Serve the app using Nginx
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
