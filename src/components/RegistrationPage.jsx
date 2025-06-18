@@ -3,7 +3,7 @@ import {useState} from "react";
 
 const RegistrationPage = () => {
     const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
-
+    console.log("Registration page loaded");
     const [registerationData, setRegisterationData] = useState({
         username: '', password: '',
         firstname: '', lastname: '',
