@@ -1,5 +1,2 @@
 {
-  "buildCommand": "npm install --force && npm run build",
-  "installCommand": "npm install --force",
-  "clean": true
 }
