@@ -1,4 +1,10 @@
 {
-  "buildCommand": "npm run build --no-cache",
-  "installCommand": "npm ci --no-cache"
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "nixpacks",
+    "buildCommand": "npm install --force && npm run build",
+    "installCommand": "npm install --force",
+    "clean": true,
+
+  }
 }
