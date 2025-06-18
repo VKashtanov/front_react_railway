@@ -1,0 +1,4 @@
+{
+  "buildCommand": "npm run build --no-cache",
+  "installCommand": "npm ci --no-cache"
+}
