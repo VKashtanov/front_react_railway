@@ -11,6 +11,7 @@ const RegistrationPage = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        console.log("do it too")
         console.log("GOT IT : " + VITE_BACKEND_URL);
 
         // if (registerationData.username !== "" && registerationData.password !== "" && registerationData.firstname !== "" && registerationData.lastname !== "") {

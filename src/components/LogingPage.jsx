@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 function LogingPage() {
     const [credentials, setCredentials] = useState({username: '', password: ''});
     const navigate = useNavigate()
+
     const handleChange = (event) => {
         const {name, value} = event.target;
         setCredentials(prev => ({
